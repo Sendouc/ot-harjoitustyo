@@ -1,0 +1,114 @@
+[Kalles-MBP-2:tiedostoja sendou$ git log --stat | cat
+commit 9974244187b3b2fd432a328af953e71c1b28fa80
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:37:03 2019 +0200
+
+    lopuksi
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 5184d906e8bce0e9b9f0898975871bb5128adca3
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:34:03 2019 +0200
+
+    uudet filut
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit cfe129fdb0c3faa20577bfe409083f0fa6d6e29f
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:29:04 2019 +0200
+
+    muutokset -p
+
+ eka.txt    | 4 ++--
+ kolmas.txt | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 2097b26e77849a39645027c50329e25fe9cf9a8c
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:26:57 2019 +0200
+
+    renamed
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit c1245ee6f95e4dd11bf6aedae6bc76bdbde97abb
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:25:21 2019 +0200
+
+    poistettu toinen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 2cd31386b7518afec163e86c9bb6a72ace6768eb
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:23:41 2019 +0200
+
+    muutoksia
+
+ tiedosto.txt | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+commit 037617ef35de0e0f917cc900b1f54aabbe9814cb
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:22:49 2019 +0200
+
+    paljon tekstia
+
+ tiedosto.txt | 42 +++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 41 insertions(+), 1 deletion(-)
+
+commit ebdbf07e465439302d5b7f459190a97ed375dd0a
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:12:21 2019 +0200
+
+    stuff folder
+
+ stuff/jokin.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 6c186164e3e5fd1d4288622cfdb78743e7e21dd9
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:11:31 2019 +0200
+
+    muutoksia
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 01f955526b07836cd7a31433a127aefd11a535fe
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:09:34 2019 +0200
+
+    kolmas
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 07750e6a2a7f80da0e38bb9b6c408354dbb4cc3b
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:07:53 2019 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit cd26de2f205a26a540197a860331ceee3c59b639
+Author: Kalle <sendou77@gmail.com>
+Date:   Tue Nov 5 10:05:43 2019 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
