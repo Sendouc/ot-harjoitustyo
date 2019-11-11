@@ -1,6 +1,6 @@
 # Ohjelmistotekniikka, harjoitustyö
 
-## Runner Diary App
+## Running Diary App
 
 [vaatimusmäärittely](https://github.com/Sendouc/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
