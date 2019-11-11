@@ -2,7 +2,7 @@
 
 ## Runner Diary App
 
-[vaatimusmäärittely](https://github.com/Sendouc/ot-harjoitustyo/blob/master/laskarit/dokumentaatio/vaatimusmaarittely.md)
+[vaatimusmäärittely](https://github.com/Sendouc/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 ## Tehtävät
 
