@@ -1,5 +1,9 @@
 # Ohjelmistotekniikka, harjoitustyö
 
+## Runner Diary App
+
+[vaatimusmäärittely](https://github.com/Sendouc/ot-harjoitustyo/blob/master/laskarit/dokumentaatio/vaatimusmaarittely.md)
+
 ## Tehtävät
 
 ### Viikko 1
