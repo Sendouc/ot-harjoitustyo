@@ -1,17 +1,3 @@
-# Ohjelmistotekniikka, harjoitustyö
-
-## Running Diary App
-
-[vaatimusmäärittely](https://github.com/Sendouc/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
-
-## Tehtävät
-
-### Viikko 1
-
-[gitlog.txt](https://github.com/Sendouc/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-
-[komentorivi.txt](https://github.com/Sendouc/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
-
 # Running Diary App
 
 Sovelluksen avulla juoksija voi pitää kirjaa lenkeistään. Sovellus antaa käyttäjän vertailla tuloksiaan omiin entisiin lenkkeihin. Palautetta annetaan käyttäjälle sen mukaan, miten paljon lenkkejä on viime aikoina kertynyt.
