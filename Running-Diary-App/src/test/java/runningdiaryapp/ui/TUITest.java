@@ -27,6 +27,6 @@ public class TUITest {
     public void endingMethodWorksCorrectly() {
         Scanner s = new Scanner(System.in);
         tui.end(s);
-        assertEquals("See you next time! Have fun running.", outContent.toString());
+        assertEquals("See you next time! Have fun running.", outContent.toString().replaceAll("[\\r\\n]+", ""));
     }
 }
