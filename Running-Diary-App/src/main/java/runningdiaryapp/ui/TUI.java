@@ -74,7 +74,6 @@ public class TUI {
 
     public void end(Scanner scanner) throws Exception {
         scanner.close();
-        service.close();
         System.out.println("See you next time! Have fun running.");
     }
 

@@ -9,6 +9,4 @@ public interface DiaryDao {
     List<Route> getRoutes() throws Exception;
 
     void addRoute(Route route) throws Exception;
-
-    void close() throws Exception;
 }
