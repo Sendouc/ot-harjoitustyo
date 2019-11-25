@@ -9,3 +9,5 @@
 | 25.11. | 3    | sqlite konfigurointi                                 |
 | 25.11. | 2    | tietokantatoiminnallisuuden lisääminen               |
 | 25.11. | 1    | muuta satunnaista liittyen tämän viikon tavotteisiin |
+
+yhteensä: 15 tuntia
