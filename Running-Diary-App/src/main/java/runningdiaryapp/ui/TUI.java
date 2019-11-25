@@ -1,11 +1,13 @@
 package runningdiaryapp.ui;
 
+import java.util.List;
 import java.util.Scanner;
 import runningdiaryapp.domain.AppService;
+import runningdiaryapp.domain.Route;
 
 public class TUI {
     private AppService service;
-    String COMMANDS = "1=Add a new route to the database\n2=Record new run\n3=Quit the program";
+    String COMMANDS = "1=Add a new route to the database\n2=View routes in database\n3=Record new run\n4=Quit the program";
 
     public TUI() throws Exception {
         service = new AppService();
@@ -15,7 +17,7 @@ public class TUI {
         System.out.println("Not yet implemented.");
     }
 
-    public void addNewRoute(Scanner scanner) {
+    public void addNewRoute(Scanner scanner) throws Exception {
         System.out.println("What is the route called?");
         String name = scanner.nextLine();
         System.out.println("How long is the route in meters?");
@@ -39,23 +41,38 @@ public class TUI {
         System.out.println("New route called " + name + " succesfully created!");
     }
 
-    public void start() {
+    public void viewRoutes() throws Exception {
+        List<Route> routes = service.getRoutes();
+        System.out.println("Routes currently registered:\n");
+        if (routes.isEmpty()) {
+            System.out.println("No routes in the database currently. Add one!");
+            return;
+        }
+        for (Route route : routes) {
+            System.out.println("Name: " + route.getName() + " Length: " + route.getLength());
+        }
+    }
+
+    public void start() throws Exception {
         String answer = "";
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello runner!\n");
-        while (!answer.equals("3")) {
+        while (!answer.equals("4")) {
             System.out.println(COMMANDS + "\n\nYour choice?");
             answer = scanner.nextLine();
             if (answer.equals("1"))
                 addNewRoute(scanner);
-            else if (answer.equals("2"))
+            else if (answer.equals("2")) {
+                viewRoutes();
+            } else if (answer.equals("3"))
                 addNewRun();
         }
         end(scanner);
     }
 
-    public void end(Scanner scanner) {
+    public void end(Scanner scanner) throws Exception {
         scanner.close();
+        service.close();
         System.out.println("See you next time! Have fun running.");
     }
 

@@ -10,34 +10,36 @@ Sovellukseen on suunniteltu vain yksi käyttäjätyyppi. Useampaa käyttäjää 
 
 ## Perusversion tarjoama toiminnallisuus
 
-- käyttäjä voi lisätä lenkin tietokantaan
+- [x] käyttäjä voi lisätä reitin tietokantaan
 
-- käyttäjä voi antaa lenkille nimen jolloin lenkkejä voidaan vertailla ajan mukaan helposti
+- [ ] käyttäjä voi lisätä lenkin tietokantaan
 
-- jonkinlainen näkymä jossa näkyy viime ajan lenkit
+- [x] käyttäjä voi antaa lenkille nimen jolloin lenkkejä voidaan vertailla ajan mukaan helposti
 
-- käyttäjälle annetaan palautetta sen mukaan miten paljon on viime aikoina tullut lenkkeiltyä
+- [ ] jonkinlainen näkymä jossa näkyy viime ajan lenkit
 
-- lenkkejä voi poistaa
+- [ ] käyttäjälle annetaan palautetta sen mukaan miten paljon on viime aikoina tullut lenkkeiltyä
 
-- laskuri joka näyttää paljon käyttäjä on lenkkeillyt yhteensä
+- [ ] lenkkejä voi poistaa
+
+- [ ] laskuri joka näyttää paljon käyttäjä on lenkkeillyt yhteensä
 
 ## Jatkokehitysideoita
 
 Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla
 
-- graafinen käyttöliittymä
+- [ ] graafinen käyttöliittymä
 
-- käytetään jotain sää-APIa ja lisätään jokaisen lenkin yhteyteen tieto siitä millainen sää oli lenkin yhteydessä
+- [ ] käytetään jotain sää-APIa ja lisätään jokaisen lenkin yhteyteen tieto siitä millainen sää oli lenkin yhteydessä
 
-- ylempään kohtaan liittyen käyttäjän kaupunki pitää tallettaa
+- [ ] ylempään kohtaan liittyen käyttäjän kaupunki pitää tallettaa
 
-- näytetään lenkkeiltyjen kilometrien määrä viimeisen vuoden, kuukauden ja viikon aikana eikä vain kaikki yhteensä
+- [ ] näytetään lenkkeiltyjen kilometrien määrä viimeisen vuoden, kuukauden ja viikon aikana eikä vain kaikki yhteensä
 
-- lenkkien lisäys suoraan komentoriviltä käyttämällä argumentteja
+- [ ] lenkkien lisäys suoraan komentoriviltä käyttämällä argumentteja
 
-- lenkkireittien etsiminen nimen perusteella
+- [ ] lenkkireittien etsiminen nimen perusteella
 
-- lenkkireittien listaaminen pituuden mukaan
+- [ ] lenkkireittien listaaminen pituuden mukaan
 
-- annetaan käyttäjän asettaa joku tavoitepäivämäärä (esim. kilpailu) joka näytetään sovelluksessa
+- [ ] annetaan käyttäjän asettaa joku tavoitepäivämäärä (esim. kilpailu) joka näytetään sovelluksessa

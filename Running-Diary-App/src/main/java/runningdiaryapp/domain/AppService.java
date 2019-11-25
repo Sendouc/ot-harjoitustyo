@@ -1,13 +1,15 @@
 package runningdiaryapp.domain;
 
-import runningdiaryapp.dao.DBRouteDao;
-import runningdiaryapp.dao.RouteDao;
+import java.util.List;
+
+import runningdiaryapp.dao.DBDiaryDao;
+import runningdiaryapp.dao.DiaryDao;
 
 public class AppService {
-    private RouteDao routeDao;
+    private DiaryDao diaryDao;
 
     public AppService() throws Exception {
-        routeDao = new DBRouteDao();
+        diaryDao = new DBDiaryDao();
     }
 
     /**
@@ -17,9 +19,17 @@ public class AppService {
      * @param length lenkin pituus metreissä
      */
 
-    public boolean createRoute(String name, int length) {
+    public boolean createRoute(String name, int length) throws Exception {
         Route route = new Route(name, length);
-        // TODO: Add to database
+        diaryDao.addRoute(route);
         return true;
+    }
+
+    public List<Route> getRoutes() throws Exception {
+        return diaryDao.getRoutes();
+    }
+
+    public void close() throws Exception {
+        diaryDao.close();
     }
 }

@@ -5,7 +5,6 @@ package runningdiaryapp.domain;
  */
 
 public class Route {
-
     private String id;
     private String name;
     private int length;
@@ -19,6 +18,18 @@ public class Route {
     public Route(String name, int length) {
         this.name = name;
         this.length = length;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getLength() {
+        return length;
     }
 
     public void setId(String id) {
