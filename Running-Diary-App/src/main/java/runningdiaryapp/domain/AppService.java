@@ -9,7 +9,7 @@ public class AppService {
     private DiaryDao diaryDao;
 
     public AppService() throws Exception {
-        diaryDao = new DBDiaryDao();
+        diaryDao = new DBDiaryDao("test.db");
     }
 
     /**

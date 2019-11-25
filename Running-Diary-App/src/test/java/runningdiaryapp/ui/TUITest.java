@@ -13,7 +13,6 @@ import static org.junit.Assert.*;
 import runningdiaryapp.ui.TUI;
 
 public class TUITest {
-
     private TUI tui;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -24,9 +23,10 @@ public class TUITest {
     }
 
     @Test
-    public void endingMethodWorksCorrectly() {
+    public void endingMethodWorksCorrectly() throws Exception {
         Scanner s = new Scanner(System.in);
         tui.end(s);
         assertEquals("See you next time! Have fun running.", outContent.toString().replaceAll("[\\r\\n]+", ""));
     }
+
 }

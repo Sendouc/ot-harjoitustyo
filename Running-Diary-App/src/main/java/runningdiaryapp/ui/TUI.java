@@ -7,7 +7,7 @@ import runningdiaryapp.domain.Route;
 
 public class TUI {
     private AppService service;
-    String COMMANDS = "1=Add a new route to the database\n2=View routes in database\n3=Record new run\n4=Quit the program";
+    String commands = "1=Add a new route to the database\n2=View routes in database\n3=Record new run\n4=Quit the program";
 
     public TUI() throws Exception {
         service = new AppService();
@@ -17,25 +17,26 @@ public class TUI {
         System.out.println("Not yet implemented.");
     }
 
-    public void addNewRoute(Scanner scanner) throws Exception {
+    public void addNewRoute(Scanner s) throws Exception {
         System.out.println("What is the route called?");
-        String name = scanner.nextLine();
+        String name = s.nextLine();
         System.out.println("How long is the route in meters?");
-        String length = scanner.nextLine();
+        String length = s.nextLine();
         int meters = 0;
         while (meters == 0) {
             try {
                 meters = Integer.parseInt(length);
             } catch (NumberFormatException e) {
                 System.out.println("Invalid number.\n\nHow long is the route in meters?");
-                length = scanner.nextLine();
+                length = s.nextLine();
             }
         }
         System.out.println(name + " (" + meters + " meters) (yes/no)?");
-        String selection = scanner.nextLine();
+        String selection = s.nextLine();
 
-        if (!selection.toUpperCase().equals("YES"))
+        if (!selection.toUpperCase().equals("YES")) {
             return;
+        }
 
         service.createRoute(name, meters);
         System.out.println("New route called " + name + " succesfully created!");
@@ -58,14 +59,15 @@ public class TUI {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello runner!\n");
         while (!answer.equals("4")) {
-            System.out.println(COMMANDS + "\n\nYour choice?");
+            System.out.println(commands + "\n\nYour choice?");
             answer = scanner.nextLine();
-            if (answer.equals("1"))
+            if (answer.equals("1")) {
                 addNewRoute(scanner);
-            else if (answer.equals("2")) {
+            } else if (answer.equals("2")) {
                 viewRoutes();
-            } else if (answer.equals("3"))
+            } else if (answer.equals("3")) {
                 addNewRun();
+            }
         }
         end(scanner);
     }

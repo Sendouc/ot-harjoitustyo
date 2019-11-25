@@ -17,9 +17,9 @@ public class DBDiaryDao implements DiaryDao {
     Connection conn;
     String url;
 
-    public DBDiaryDao() throws Exception {
+    public DBDiaryDao(String db) throws Exception {
         routes = new ArrayList<>();
-        url = "jdbc:sqlite:test.db";
+        url = "jdbc:sqlite:" + db;
         String query = "CREATE TABLE IF NOT EXISTS route (id text PRIMARY KEY, name text NOT NULL, length integer NOT NULL);";
 
         try {

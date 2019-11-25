@@ -8,6 +8,8 @@ Sovelluksen avulla juoksija voi pitää kirjaa lenkeistään. Sovellus antaa kä
 
 [Työaikakirjanpito](https://github.com/Sendouc/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+[Arkkitehtuurikuvaus](https://github.com/Sendouc/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 ## Komentorivitoiminnot
 
 ### Ohjelman ajaminen
