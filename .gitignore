@@ -2,3 +2,4 @@ target/
 nbproject/
 .vscode/
 test.db
+checkstyle.xml
