@@ -1,4 +1,4 @@
 target/
 nbproject/
 .vscode/
-test.db
+*.db

@@ -19,7 +19,6 @@ public class DBDiaryDao implements DiaryDao {
 
     private Connection getConn(String url) throws Exception {
         if (conn == null) {
-            Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection(url);
         }
 
@@ -41,9 +40,9 @@ public class DBDiaryDao implements DiaryDao {
 
     public DBDiaryDao(String db) throws Exception {
         routes = new ArrayList<>();
-        url = "jdbc:sqlite:" + db;
+        url = "jdbc:h2:" + db;
 
-        createTable("route (id text PRIMARY KEY, name text NOT NULL, length integer NOT NULL)");
+        createTable("route (id varchar PRIMARY KEY, name varchar NOT NULL, length int NOT NULL)");
 
         String getRoutes = "SELECT id, name, length FROM route;";
         try (Statement stmt = getConn(url).createStatement(); ResultSet rs = stmt.executeQuery(getRoutes);) {

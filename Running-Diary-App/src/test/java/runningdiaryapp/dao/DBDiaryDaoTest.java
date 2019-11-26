@@ -19,7 +19,7 @@ public class DBDiaryDaoTest {
 
     @Before
     public void setUp() throws Exception {
-        diaryDao = new DBDiaryDao(":memory:");
+        diaryDao = new DBDiaryDao(":mem:");
     }
 
     @Test
