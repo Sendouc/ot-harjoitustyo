@@ -15,6 +15,20 @@ import runningdiaryapp.domain.Route;
 public class DBDiaryDao implements DiaryDao {
     public List<Route> routes;
     String url;
+    Connection conn;
+
+    private Connection getConn(String url) throws Exception {
+        if (conn == null) {
+            Class.forName("org.sqlite.JDBC");
+            conn = DriverManager.getConnection(url);
+        }
+
+        return conn;
+    }
+
+    public void closeConn() throws Exception {
+        conn.close();
+    }
 
     public DBDiaryDao(String db) throws Exception {
         routes = new ArrayList<>();
@@ -22,16 +36,14 @@ public class DBDiaryDao implements DiaryDao {
 
         String createTables = "CREATE TABLE IF NOT EXISTS route (id text PRIMARY KEY, name text NOT NULL, length integer NOT NULL);";
 
-        try (Connection conn = DriverManager.getConnection(url); Statement stmt = conn.createStatement()) {
+        try (Statement stmt = getConn(url).createStatement()) {
             stmt.execute(createTables);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
 
         String getRoutes = "SELECT id, name, length FROM route;";
-        try (Connection conn = DriverManager.getConnection(url);
-                Statement stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery(getRoutes);) {
+        try (Statement stmt = getConn(url).createStatement(); ResultSet rs = stmt.executeQuery(getRoutes);) {
             while (rs.next()) {
                 routes.add(new Route(rs.getString("id"), rs.getString("name"), rs.getInt("length")));
             }
@@ -44,9 +56,9 @@ public class DBDiaryDao implements DiaryDao {
         return UUID.randomUUID().toString();
     }
 
-    private void saveRoute(Route route) {
+    private void saveRoute(Route route) throws Exception {
         String query = "INSERT INTO route (id, name, length) VALUES (?, ?, ?);";
-        try (Connection conn = DriverManager.getConnection(url); Statement stmt = conn.createStatement()) {
+        try (Statement stmt = getConn(url).createStatement()) {
             PreparedStatement prepared = conn.prepareStatement(query);
             prepared.setString(1, route.getId());
             prepared.setString(2, route.getName());

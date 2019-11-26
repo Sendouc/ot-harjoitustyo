@@ -28,4 +28,8 @@ public class AppService {
     public List<Route> getRoutes() throws Exception {
         return diaryDao.getRoutes();
     }
+
+    public void closeDbConnection() throws Exception {
+        diaryDao.closeConn();
+    }
 }
