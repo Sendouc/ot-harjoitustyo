@@ -35,15 +35,12 @@ public class DBDiaryDao implements DiaryDao {
         url = "jdbc:sqlite:" + db;
 
         String createTables = "CREATE TABLE IF NOT EXISTS route (id text PRIMARY KEY, name text NOT NULL, length integer NOT NULL);";
-
-        try (Statement stmt = getConn(url).createStatement()) {
-            stmt.execute(createTables);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-
         String getRoutes = "SELECT id, name, length FROM route;";
-        try (Statement stmt = getConn(url).createStatement(); ResultSet rs = stmt.executeQuery(getRoutes);) {
+
+        try (Statement stmt = getConn(url).createStatement();
+                Statement stmt2 = getConn(url).createStatement();
+                ResultSet rs = stmt2.executeQuery(getRoutes);) {
+            stmt.execute(createTables);
             while (rs.next()) {
                 routes.add(new Route(rs.getString("id"), rs.getString("name"), rs.getInt("length")));
             }
