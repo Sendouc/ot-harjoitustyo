@@ -1,4 +1,7 @@
 target/
 nbproject/
 .vscode/
+.project
+.classpath
+.settings/
 *.db
