@@ -4,10 +4,9 @@
 | :----: | :--- | :--------------------------------------------------- |
 | 11.11. | 1    | vaatimusmaarittely                                   |
 | 19.11. | 4    | maven setup                                          |
-| 19.11. | 3    | ui ensimmäinen versio                                |
-| 19.11. | 1    | testien tekeminen                                    |
+|        | 3    | ui ensimmäinen versio                                |
+|        | 1    | testien tekeminen                                    |
 | 25.11. | 3    | sqlite konfigurointi                                 |
-| 25.11. | 2    | tietokantatoiminnallisuuden lisääminen               |
-| 25.11. | 1    | muuta satunnaista liittyen tämän viikon tavotteisiin |
-
-yhteensä: 15 tuntia
+|        | 2    | tietokantatoiminnallisuuden lisääminen               |
+|        | 1    | muuta satunnaista liittyen tämän viikon tavotteisiin |
+|  yht   | 15   |                                                      |
