@@ -7,14 +7,28 @@ import runningdiaryapp.domain.Route;
 
 public class TUI {
     private AppService service;
-    String commands = "1=Add a new route to the database\n2=View routes in database\n3=Record new run\n4=Quit the program";
+    String commands = "-----\n1=Add a new route to the database\n2=View routes in database\n"
+            + "3=Search for a route by name\n4=Record new run\n5=Quit the program";
 
     public TUI() throws Exception {
         service = new AppService();
     }
 
-    public void addNewRun() {
-        System.out.println("Not yet implemented.");
+    public void addNewRun() throws Exception {
+        List<Route> routes = service.getRoutes();
+        if (routes.isEmpty()) {
+            System.out.println("No routes in the database currently. Add one before adding a run!");
+            return;
+        }
+
+        for (int i = 0; i < routes.size(); i++) {
+            Route route = routes.get(i);
+            System.out.println("[" + (i + 1) + "] " + route.getName() + "(" + route.getLength() + " meters)");
+        }
+
+        System.out.println("Which route you ran? (-1 to quit)");
+
+        // TODO: Rest of the method
     }
 
     public void addNewRoute(Scanner s) throws Exception {
@@ -54,11 +68,26 @@ public class TUI {
         }
     }
 
+    public void searchRouteByName(Scanner s) throws Exception {
+        System.out.println("What route do you want to search for?");
+        String name = s.nextLine();
+        List<Route> routes = service.getRoutesByName(name);
+
+        if (routes.isEmpty()) {
+            System.out.println("No routes found matching the search criteria.");
+        } else {
+            System.out.println("Following routes match the name given:");
+            for (Route route : routes) {
+                System.out.println("Name: " + route.getName() + " Length: " + route.getLength());
+            }
+        }
+    }
+
     public void start() throws Exception {
         String answer = "";
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello runner!\n");
-        while (!answer.equals("4")) {
+        while (!answer.equals("5")) {
             System.out.println(commands + "\n\nYour choice?");
             answer = scanner.nextLine();
             if (answer.equals("1")) {
@@ -66,6 +95,8 @@ public class TUI {
             } else if (answer.equals("2")) {
                 viewRoutes();
             } else if (answer.equals("3")) {
+                searchRouteByName(scanner);
+            } else if (answer.equals("4")) {
                 addNewRun();
             }
         }

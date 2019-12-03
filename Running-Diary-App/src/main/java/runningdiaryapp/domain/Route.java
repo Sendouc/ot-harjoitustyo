@@ -4,7 +4,7 @@ package runningdiaryapp.domain;
  * Lenkkireittiä kuvaava luokka
  */
 
-public class Route {
+public class Route implements Comparable<Route> {
     private String id;
     private String name;
     private int length;
@@ -34,5 +34,10 @@ public class Route {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    @Override
+    public int compareTo(Route anotherRoute) {
+        return anotherRoute.length - this.length;
     }
 }

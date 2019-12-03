@@ -38,6 +38,15 @@ mvn jacoco:report
 
 Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto _target/site/jacoco/index.html_
 
+### Jarin generointi ja suorittaminen
+
+```
+cd Running-Diary-App/
+mvn package
+cd target
+java -jar RunningDiaryApp-1.0-SNAPSHOT.jar
+```
+
 ### Checkstyle
 
 Tiedostoon [checkstyle.xml](https://github.com/mluukkai/OtmTodoApp/blob/master/checkstyle.xml) määrittelemät tarkistukset suoritetaan komennolla

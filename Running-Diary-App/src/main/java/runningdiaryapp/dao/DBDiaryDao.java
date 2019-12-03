@@ -1,6 +1,8 @@
 package runningdiaryapp.dao;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 import java.sql.Connection;
@@ -36,6 +38,8 @@ public class DBDiaryDao implements DiaryDao {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+
+        routes.clear();
     }
 
     public DBDiaryDao(String db) throws Exception {
@@ -44,7 +48,7 @@ public class DBDiaryDao implements DiaryDao {
 
         createTable("route (id varchar PRIMARY KEY, name varchar NOT NULL, length int NOT NULL)");
 
-        String getRoutes = "SELECT id, name, length FROM route;";
+        String getRoutes = "SELECT id, name, length FROM route ORDER BY length DESC;";
         try (Statement stmt = getConn(url).createStatement(); ResultSet rs = stmt.executeQuery(getRoutes);) {
             while (rs.next()) {
                 routes.add(new Route(rs.getString("id"), rs.getString("name"), rs.getInt("length")));
@@ -77,9 +81,22 @@ public class DBDiaryDao implements DiaryDao {
     }
 
     @Override
+    public List<Route> getRoutesByName(String name) throws Exception {
+        List<Route> toReturn = new ArrayList<>();
+        for (Route route : routes) {
+            if (route.getName().toLowerCase().contains(name.toLowerCase())) {
+                toReturn.add(route);
+            }
+        }
+
+        return toReturn;
+    }
+
+    @Override
     public void addRoute(Route route) throws Exception {
         route.setId(generateId());
         routes.add(route);
+        Collections.sort(routes);
         saveRoute(route);
     }
 }

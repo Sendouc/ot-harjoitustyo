@@ -29,6 +29,10 @@ public class AppService {
         return diaryDao.getRoutes();
     }
 
+    public List<Route> getRoutesByName(String name) throws Exception {
+        return diaryDao.getRoutesByName(name);
+    }
+
     public void closeDbConnection() throws Exception {
         diaryDao.closeConn();
     }

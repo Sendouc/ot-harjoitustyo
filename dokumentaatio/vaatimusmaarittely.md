@@ -38,8 +38,8 @@ Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seura
 
 - [ ] lenkkien lisäys suoraan komentoriviltä käyttämällä argumentteja
 
-- [ ] lenkkireittien etsiminen nimen perusteella
+- [x] lenkkireittien etsiminen nimen perusteella
 
-- [ ] lenkkireittien listaaminen pituuden mukaan
+- [x] lenkkireittien listaaminen pituuden mukaan
 
 - [ ] annetaan käyttäjän asettaa joku tavoitepäivämäärä (esim. kilpailu) joka näytetään sovelluksessa
