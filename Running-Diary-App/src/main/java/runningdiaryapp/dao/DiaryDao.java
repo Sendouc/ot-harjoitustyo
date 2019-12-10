@@ -3,6 +3,7 @@ package runningdiaryapp.dao;
 import java.util.List;
 
 import runningdiaryapp.domain.Route;
+import runningdiaryapp.domain.Run;
 
 public interface DiaryDao {
 
@@ -10,7 +11,11 @@ public interface DiaryDao {
 
     List<Route> getRoutesByName(String name) throws Exception;
 
+    List<Run> getRuns() throws Exception;
+
     void addRoute(Route route) throws Exception;
+
+    void addRun(Run run) throws Exception;
 
     void closeConn() throws Exception;
 }
