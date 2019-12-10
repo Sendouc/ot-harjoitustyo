@@ -15,6 +15,7 @@ Sovelluksen avulla juoksija voi pitää kirjaa lenkeistään. Sovellus antaa kä
 ## Releaset
 
 [Viikko 5](https://github.com/Sendouc/ot-harjoitustyo/releases/tag/viikko5)
+
 [Viikko 6](https://github.com/Sendouc/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Komentorivitoiminnot
