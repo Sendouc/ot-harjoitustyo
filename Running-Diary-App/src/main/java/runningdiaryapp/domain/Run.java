@@ -42,10 +42,11 @@ public class Run implements Comparable<Run> {
     public int compareTo(Run anotherRun) {
         long result = anotherRun.date.getTime() - this.date.getTime();
 
-        if (result > 0L)
+        if (result > 0L) {
             return 1;
-        if (result < 0L)
+        } else if (result < 0L) {
             return -1;
+        }
 
         return 0;
     }

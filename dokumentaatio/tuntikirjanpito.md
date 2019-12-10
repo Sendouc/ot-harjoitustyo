@@ -12,4 +12,7 @@
 | 3.12.  | 3    | uusien ominaisuuksien lisääminen (reittien etsiminen + järjestys) |
 |        | 1    | h2 troubleshoottaus                                               |
 |        | 1    | testien tekeminen                                                 |
-|  yht   | 20   |                                                                   |
+| 10.12  | 3    | lenkin lisääminen tietokantaan                                    |
+|        | 1    | H2 debugausta                                                     |
+|        | 1    | testien tekeminen                                                 |
+|  yht   | 25   |                                                                   |

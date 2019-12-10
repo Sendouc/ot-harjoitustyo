@@ -12,11 +12,11 @@ Sovellukseen on suunniteltu vain yksi käyttäjätyyppi. Useampaa käyttäjää 
 
 - [x] käyttäjä voi lisätä reitin tietokantaan
 
-- [ ] käyttäjä voi lisätä lenkin tietokantaan
+- [x] käyttäjä voi lisätä lenkin tietokantaan
 
 - [x] käyttäjä voi antaa lenkille nimen jolloin lenkkejä voidaan vertailla ajan mukaan helposti
 
-- [ ] jonkinlainen näkymä jossa näkyy viime ajan lenkit
+- [x] jonkinlainen näkymä jossa näkyy viime ajan lenkit
 
 - [ ] käyttäjälle annetaan palautetta sen mukaan miten paljon on viime aikoina tullut lenkkeiltyä
 

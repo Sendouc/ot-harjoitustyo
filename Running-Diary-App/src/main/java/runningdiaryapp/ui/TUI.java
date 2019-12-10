@@ -120,6 +120,20 @@ public class TUI {
         }
     }
 
+    private void processCommand(String command, Scanner scanner) throws Exception {
+        if (command.equals("1")) {
+            addNewRoute(scanner);
+        } else if (command.equals("2")) {
+            viewRoutes();
+        } else if (command.equals("3")) {
+            searchRouteByName(scanner);
+        } else if (command.equals("4")) {
+            addNewRun(scanner);
+        } else if (command.equals("5")) {
+            viewRuns();
+        }
+    }
+
     /**
      * Tekstikäyttöliittymän aloittava metodi
      * 
@@ -132,17 +146,7 @@ public class TUI {
         while (!answer.equals("6")) {
             System.out.println(commands + "\n\nYour choice?");
             answer = scanner.nextLine();
-            if (answer.equals("1")) {
-                addNewRoute(scanner);
-            } else if (answer.equals("2")) {
-                viewRoutes();
-            } else if (answer.equals("3")) {
-                searchRouteByName(scanner);
-            } else if (answer.equals("4")) {
-                addNewRun(scanner);
-            } else if (answer.equals("5")) {
-                viewRuns();
-            }
+            processCommand(answer, scanner);
         }
         end(scanner);
     }
