@@ -22,7 +22,7 @@ Testauksessa on pyritty tekemään integraatiotestejä ohjelman suorituksen kann
 
 Sovelluksen testauksen rivikattavuus on 80% ja haarautumakattavuus 81%
 
-<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/testauskattavuus.png" width="800">
+<img src="https://raw.githubusercontent.com/Sendouc/ot-harjoitustyo/master/dokumentaatio/kuvat/testauskattavuus.png" width="800">
 
 Testausta olisi voinut parantaa erityisesti corner casejen kohdalla.
 
