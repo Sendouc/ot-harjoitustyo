@@ -12,11 +12,15 @@ Sovelluksen avulla juoksija voi pitää kirjaa lenkeistään. Sovellus antaa kä
 
 [Käyttöohje](https://github.com/Sendouc/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
+[Testausdokumentti](https://github.com/Sendouc/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
+
 ## Releaset
 
 [Viikko 5](https://github.com/Sendouc/ot-harjoitustyo/releases/tag/viikko5)
 
 [Viikko 6](https://github.com/Sendouc/ot-harjoitustyo/releases/tag/viikko6)
+
+[Loppupalautus](https://github.com/Sendouc/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ## Komentorivitoiminnot
 
