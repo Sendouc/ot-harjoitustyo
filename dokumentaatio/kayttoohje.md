@@ -10,6 +10,12 @@ Ohjelma käynnistetään komennolla
 java -jar runningdiaryapp.jar
 ```
 
+Tietokannan nimi voidaan määrittää ympäristömuuttujan avulla ohjelman suorittamisen yhteydessä:
+
+`DB_NAME=myruns java -jar runningdiaryapp.jar`
+
+jolloin siis tietokannan nimeksi tulisi `myruns.db`. Jos tietokannan nimen määrittävää ympäristömuuttujaa ei anneta käytetään oletusarvoista nimeä `runningdiaryapp.db`
+
 ## Uuden reitin lisääminen
 
 Ennen varsinaisen lenkin lisäämistä tulee lisätä ainakin yksi lenkkireitti:

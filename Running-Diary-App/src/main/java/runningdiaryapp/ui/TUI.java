@@ -12,7 +12,7 @@ import runningdiaryapp.domain.Run;
 
 public class TUI {
     private AppService service;
-    final String commands = "-----\n1 = Add a new route to the database\n2 = View routes in database\n"
+    final String commands = "-----\n1 = Add a new route to the database\n2 = View routes in the database\n"
             + "3 = Search for a route by name\n4 = Record new run\n5 = View runs\n6 = Quit the program";
 
     public TUI() throws Exception {
@@ -63,7 +63,7 @@ public class TUI {
         System.out.println("How long is the route in meters?");
         String length = s.nextLine();
         int meters = 0;
-        while (meters == 0) {
+        while (meters <= 0) {
             try {
                 meters = Integer.parseInt(length);
             } catch (NumberFormatException e) {
@@ -143,6 +143,20 @@ public class TUI {
         String answer = "";
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello runner!\n");
+
+        int meters = service.getDistanceRan();
+        String distanceProgress = meters + " meters ran so far\n";
+        if (meters == 0) {
+            distanceProgress += "Get to it!\n";
+        } else if (meters < 5000) {
+            distanceProgress += "Good start but you can do better!\n";
+        } else if (meters < 10000) {
+            distanceProgress += "Getting there. Keep it up!\n";
+        } else {
+            distanceProgress += "You are a beast!\n";
+        }
+        System.out.println(distanceProgress);
+
         while (!answer.equals("6")) {
             System.out.println(commands + "\n\nYour choice?");
             answer = scanner.nextLine();

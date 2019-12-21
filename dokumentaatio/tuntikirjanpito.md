@@ -15,4 +15,6 @@
 | 10.12  | 3    | lenkin lisääminen tietokantaan                                    |
 |        | 1    | H2 debugausta                                                     |
 |        | 1    | testien tekeminen                                                 |
-|  yht   | 25   |                                                                   |
+| 21.12  | 3    | lenkkien pituuden koostava toiminnallisuus                        |
+|        | 1    | satunnaisia viilauksia                                            |
+|  yht   | 29   |                                                                   |

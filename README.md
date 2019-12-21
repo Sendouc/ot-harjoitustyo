@@ -20,15 +20,28 @@ Sovelluksen avulla juoksija voi pitää kirjaa lenkeistään. Sovellus antaa kä
 
 ## Komentorivitoiminnot
 
-### Ohjelman ajaminen
+### Jarin suorittaminen
 
-Ohjelma suoritetaan komennolla:
+Jar-tiedoston nimi on `RunningDiaryApp-1.0-SNAPSHOT.jar` jos olet generoinut sen itse tai `runningdiaryapp.jar` jos se on ladattu GitHub releaseista.
 
 ```
-mvn compile exec:java -Dexec.mainClass=runningdiaryapp.Main
+java -jar runningdiaryapp.jar
 ```
 
-kun ollaan kansiossa `Running-Diary-App`
+Tietokannan nimi voidaan määrittää ympäristömuuttujan avulla ohjelman suorittamisen yhteydessä:
+
+`DB_NAME=myruns java -jar runningdiaryapp.jar`
+
+jolloin siis tietokannan nimeksi tulisi `myruns.db`. Jos tietokannan nimen määrittävää ympäristömuuttujaa ei anneta käytetään oletusarvoista nimeä `runningdiaryapp.db`
+
+### Jarin generointi
+
+```
+cd Running-Diary-App/
+mvn package
+```
+
+Jar-tiedosto löytyy `target` kansiosta.
 
 ### Testaus
 
@@ -46,14 +59,15 @@ mvn jacoco:report
 
 Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto _target/site/jacoco/index.html_
 
-### Jarin generointi ja suorittaminen
+### Ohjelman kääntäminen ja ajaminen
+
+Ohjelma suoritetaan komennolla:
 
 ```
-cd Running-Diary-App/
-mvn package
-cd target
-java -jar RunningDiaryApp-1.0-SNAPSHOT.jar
+mvn compile exec:java -Dexec.mainClass=runningdiaryapp.Main
 ```
+
+kun ollaan kansiossa `Running-Diary-App`
 
 ### Checkstyle
 

@@ -58,4 +58,10 @@ public class DBDiaryDaoTest {
         List<Route> routes = diaryDao.getRoutesByName("B");
         assertEquals(2, routes.size());
     }
+
+    @Test
+    public void runDistanceCountIsCorrect() throws Exception {
+        int distance = diaryDao.getDistanceRan();
+        assertEquals(300, distance);
+    }
 }

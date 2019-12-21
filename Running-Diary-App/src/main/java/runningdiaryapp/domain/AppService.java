@@ -1,6 +1,7 @@
 package runningdiaryapp.domain;
 
 import java.util.List;
+import java.util.Map;
 
 import runningdiaryapp.dao.DBDiaryDao;
 import runningdiaryapp.dao.DiaryDao;
@@ -13,7 +14,9 @@ public class AppService {
     private DiaryDao diaryDao;
 
     public AppService() throws Exception {
-        diaryDao = new DBDiaryDao("./test.db");
+        Map<String, String> env = System.getenv();
+        String dbName = env.getOrDefault("DB_NAME", "runningdiaryapp");
+        diaryDao = new DBDiaryDao("./" + dbName + ".db");
     }
 
     /**
@@ -81,6 +84,17 @@ public class AppService {
      */
     public List<Route> getRoutesByName(String name) throws Exception {
         return diaryDao.getRoutesByName(name);
+    }
+
+    /**
+     * Juostujen metrien määrän hakeminen
+     * 
+     * @return juostujen metrien määrä
+     * 
+     * @throws Exception
+     */
+    public int getDistanceRan() throws Exception {
+        return diaryDao.getDistanceRan();
     }
 
     /**

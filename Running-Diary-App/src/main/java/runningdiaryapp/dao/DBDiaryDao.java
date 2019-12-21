@@ -138,4 +138,14 @@ public class DBDiaryDao implements DiaryDao {
         Collections.sort(runs);
         saveRun(run);
     }
+
+    @Override
+    public int getDistanceRan() throws Exception {
+        int toReturn = 0;
+        for (Run run : runs) {
+            toReturn += run.getLength();
+        }
+
+        return toReturn;
+    }
 }

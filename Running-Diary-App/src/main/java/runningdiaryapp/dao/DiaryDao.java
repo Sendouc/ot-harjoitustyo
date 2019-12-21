@@ -17,5 +17,7 @@ public interface DiaryDao {
 
     void addRun(Run run) throws Exception;
 
+    int getDistanceRan() throws Exception;
+
     void closeConn() throws Exception;
 }

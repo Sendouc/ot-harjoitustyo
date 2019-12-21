@@ -42,7 +42,7 @@ Käyttöliittymästä vastaa oma luokkansa: _TUI_. Jokaista käyttäjän mahdoll
 
 ## Sovelluslogiikka
 
-Reittejä ja lenkkejä kuvaavat kaksi luokkaa:
+Reittejä ja lenkkejä kuvaavat kaksi luokkaa (huomaa alla olevasta kuvasta, että kaikkia kenttiä ei ole toteuttu vaan ne ovat lisäkehityksen varalle dokumentoitu):
 
 <img src="https://raw.githubusercontent.com/Sendouc/ot-harjoitustyo/master/dokumentaatio/kuvat/rakenne.png">
 
@@ -54,8 +54,17 @@ Reitit ja lenkit on tallennettu käyttämällä [H2-tietokantaa](https://www.h2d
 
 Luokat noudattavat Data Access Object -suunnittelumallia, joten ne on helposti vaihdettavissa toisenlaiseen tallennusmalliin.
 
+Käyttäjä voi määrittää tietokannan nimen ympäristömuuttujaa käyttämällä.
+
 ## Päätoiminallisuuksia
 
 **Reitin lisääminen**
 
 <img src="https://raw.githubusercontent.com/Sendouc/ot-harjoitustyo/master/dokumentaatio/kuvat/reitin-lisaaminen.png">
+
+Oikeastaan kaikki toiminnallisuudet on toteuttu samanlaista mallia käyttämällä mm.
+
+- Reitin etsiminen
+- Lenkin lisääminen
+- Lenkkien selaaminen
+- Lenkkien yhteispituuden hakeminen
